@@ -1,0 +1,12 @@
+#+title: bash prompt (name wip)
+i found that startship had a lot of text rendering errors, so i stopped using it, though it's probably my fault
+
+then i found [[https://stackoverflow.com/a/11107564][this]]
+
+and did it
+
+and i made this script and put it in ~/bin/
+
+should be fully portable
+
+and much more customisable than starship anyway
