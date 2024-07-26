@@ -3,9 +3,9 @@
 ** Description
 Prompt is a small bash script I wrote for customising my prompt. Should be general-purpose enough for you to customise your prompt with it, too.
 ** Background
-A while ago I gave [[https://zshwiki.org][zsh]] a whirl and my friend recommended I try out [[https://starship.rs][starship]] to customise my prompt. I didn't like the way it looked so I cobbled together a few people's config files to create a "vanilla-plus" default-style prompt. Then I found that starship had a lot of text rendering errors, so i stopped using it, though it's probably cause of the way I was using it. I also switched back to bash shortly after.
+A while ago I gave [[https://zshwiki.org][zsh]] a whirl and my friend recommended I try out [[https://starship.rs][starship]] to customise my prompt. I didn't like the way it looked so I cobbled together a few people's config files to create a "vanilla-plus" default-style prompt. Then I found that starship had a lot of text rendering errors, and though this is probably cause of the way I was using it, I stopped using it. I also switched back to bash shortly after.
 
-Then I found a few answers on a Stack Overflow post that showed how you could customise your prompt directly in bash, and did so.
+A little while after I found a few answers on a Stack Overflow post that showed how you could customise your prompt directly in bash, and did so.
 
 I find, conversely, that this approach is orders of magnitude more customisable than starship :b
 ** "Installation"
@@ -22,5 +22,6 @@ I find, conversely, that this approach is orders of magnitude more customisable 
    #+END_SRC
 6. That should be it! Source your .bashrc however you do that (i just close and re-open my terminal) and enjoy making your prompt look like whatever you want. It's pretty hands-on, but not that hard. The file in this repo reflects my personal prompt, and there are a few comments in there that explain why stuff is the way it is.
 ** Credits
-- https://stackoverflow.com/a/11107564 - Thanks to Bob on Stack Overflow for that little code snippet in step 5
-- https://stackoverflow.com/a/3058390 - Thanks to sashang on Stack Overflow for a lot of the colour variables I have in this script
+- https://stackoverflow.com/a/11107564 - Thanks to Bob on Stack Overflow for that little code snippet in step 5 of installation.
+- https://stackoverflow.com/a/3058390 - Thanks to sashang on Stack Overflow for a lot of the colour variables I have in this script.
+- https://docs.amber-lang.com/by_example/ubuntu_updater - Thanks to whoever wrote this example program for Amber, for showing me a much easier way of getting the current WiFi SSID and checking it against a list.
