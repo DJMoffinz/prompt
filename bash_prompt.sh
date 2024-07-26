@@ -28,26 +28,25 @@ function get_git_branch {
 # This function checks for those
 check_wifi_network() {
     # Specify the ssids of bad Wi-Fi networks to check against
-    source ~/bin/bad_ssids.sh 2>/dev/null || local bad_ssids=("")
+    source ~/.local/bin/bad_ssids.sh 2>/dev/null || local bad_ssids="(example1|example2)"
 
     # initialises set_colour to blue, the colour for no connection
     local set_colour="$BLUE"
 
     # Get the SSID of the connected Wi-Fi network
-    local current_ssid=$(nmcli -t -f active,ssid dev wifi | grep -E '^yes' | cut -d: -f2)
+    local current_ssid=$(iwgetid -r)
     if [[ -z "$current_ssid" ]]; then
         current_ssid="Offline"
     else
         # Check if we are connected to any of the specified Wi-Fi networks
-        for s in "${bad_ssids[@]}"; do
-            if [[ "$current_ssid" == "$s" ]]; then
-                set_colour="$RED"
-                break
-            else
-                #This will only happen if we're connected to a network that isn't on the list
-                set_colour="$GREEN"
-            fi
-        done
+
+        if echo "$current_ssid" | grep -E "$bad_ssids" > /dev/null; then
+            set_colour="$RED"
+        else
+            #This will only happen if we're connected to a network that isn't on the list
+            set_colour="$GREEN"
+        fi
+
     fi
 
     # Return the values
