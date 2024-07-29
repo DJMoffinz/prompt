@@ -9,10 +9,10 @@ A little while after I found a few answers on a Stack Overflow post that showed 
 
 I find, conversely, that this approach is orders of magnitude more customisable than starship :b
 ** "Installation"
-1. clone the repo
-2. do src_sh{ln -s /path/to/repo/bash_prompt.sh ~/.local/bin/bash_prompt} (I now prefer this method over copying it there because I don't have to re-copy it and src_sh{chmod +x} it every time I make a change in the repo)
-3. src_sh{cd ~/.local/bin}
-4. src_sh{chmod +x bash_prompt}
+1. Clone the repo
+2. In the terminal, do =ln -s /path/to/repo/bash_prompt.sh ~/.local/bin/bash_prompt= (I now prefer this method over copying it there because I don't have to re-copy it and =chmod +x= it every time I make a change in the repo)
+3. Then =cd ~/.local/bin=
+4. Then =chmod +x bash_prompt=
 5. Now, add the following lines to your .bashrc:
    #+BEGIN_SRC sh
      function prompt_command {
