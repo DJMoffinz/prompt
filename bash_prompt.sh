@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
 
 #Normal colours
 RED="\[\033[0;31m\]"
